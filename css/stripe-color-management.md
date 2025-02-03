@@ -87,4 +87,26 @@ Para la parte de del background, Stripe siempre usa un elemento aparte con la cl
 
 Para la parte de un background con un top o bottom diagonal lo hace en este `.Section__background` usando `transform: skew()`
 
+## .MktBody + .theme--XXX
 
+La clase `.MktBody` se encarga de colocar las siguientes reglas:
+
+```css
+.MktBody {
+  margin: 0;
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeightNormal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--textColor);
+  background: var(--backgroundColor);
+}
+```
+
+Esta se encarga de agregar el `background` y `color` general, y se usa en conjunto con `.text--XXX` para que tenga efecto el `--textColor` y `--backgroundColor`
+
+```html
+<body class="MktBody ... theme--Light">
+  <!-- content -->
+</body>
+```
